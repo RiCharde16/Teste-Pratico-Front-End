@@ -28,13 +28,12 @@ export class HomeComponent implements OnInit{
     this.service.getAllPosts().subscribe(
       (resp)=>{
         this.postsModel = resp
-
         for(let x = 1; x <= this.postsModel.length; x++){
           this.service.getCommentsByPostId(x).subscribe(
             (resp)=>{
-              // console.log(x)
-              this.commentsModel.splice(x, 0, resp)
+              this.commentsModel.splice((x-1), 0, resp)
             })
+            console.log((x-1))
           }
           // this.commentsModel.sort()
           console.log(this.commentsModel) 
