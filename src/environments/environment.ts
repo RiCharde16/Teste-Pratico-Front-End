@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiBlog: "https://jsonplaceholder.typicode.com"
 };
 
 /*
