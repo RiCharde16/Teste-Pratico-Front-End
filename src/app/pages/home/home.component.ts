@@ -36,16 +36,12 @@ export class HomeComponent implements OnInit{
               this.commentsModel.splice(x, 0, resp)
             })
           }
+          this.commentsModel.sort()
           // console.log(this.commentsModel) 
       }
     )
-    // 
   }
 
-  ngAfterContentInit(): void {
-    // console.log("Depois do init")
-    console.log(this.postsModel)
-  }
 
   clickPostEvent(postId:number){
     let post = document.getElementById((postId-1).toString()) as HTMLElement 

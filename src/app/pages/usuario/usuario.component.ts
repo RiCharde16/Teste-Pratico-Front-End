@@ -19,7 +19,6 @@ export class UsuarioComponent implements OnInit, AfterViewChecked{
   ngAfterViewChecked(): void {
     if(this.userModel?.id != parseInt(this.idUser)){
       this.serviceApi()
-      console.log("Teste")
     } 
   }
 
