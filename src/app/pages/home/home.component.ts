@@ -15,10 +15,8 @@ export class HomeComponent implements OnInit{
 
 
   postsModel: postModel | any
-  display = "none"
   commentsModel: any[] = []
   
-
   constructor(private service:BlogserviceService) { }
 
   ngOnInit(): void {
@@ -34,7 +32,7 @@ export class HomeComponent implements OnInit{
         for(let x = 1; x <= this.postsModel.length; x++){
           this.service.getCommentsByPostId(x).subscribe(
             (resp)=>{
-              console.log(x)
+              // console.log(x)
               this.commentsModel.splice(x, 0, resp)
             })
           }

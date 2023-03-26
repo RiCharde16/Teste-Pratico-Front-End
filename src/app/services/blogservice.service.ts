@@ -17,7 +17,7 @@ export class BlogserviceService {
   url:string = ""
 
   constructor(private http:HttpClient) { 
-    this.url = environment.apiBlog
+    this.url = "https://jsonplaceholder.typicode.com"
   }
 
   getAllPosts():Observable<postModel>{
