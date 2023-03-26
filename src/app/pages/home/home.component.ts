@@ -36,8 +36,8 @@ export class HomeComponent implements OnInit{
               this.commentsModel.splice(x, 0, resp)
             })
           }
-          this.commentsModel.sort()
-          // console.log(this.commentsModel) 
+          // this.commentsModel.sort()
+          console.log(this.commentsModel) 
       }
     )
   }
