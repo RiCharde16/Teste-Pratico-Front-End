@@ -8,7 +8,6 @@ import { usersModel } from "src/app/models/usersModel"
 import { commentsModel } from "src/app/models/commentsModel"
 
 // Variavies de Ambiente
-import { environment } from "src/environments/environment"
 
 @Injectable({
   providedIn: 'root'
