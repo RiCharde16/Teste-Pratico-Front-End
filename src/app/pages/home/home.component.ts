@@ -33,10 +33,10 @@ export class HomeComponent implements OnInit{
             (resp)=>{
               this.commentsModel.splice((x-1), 0, resp)
             })
-            console.log((x-1))
+            // console.log((x-1))
           }
           // this.commentsModel.sort()
-          console.log(this.commentsModel) 
+          // console.log(this.commentsModel) 
       }
     )
   }
