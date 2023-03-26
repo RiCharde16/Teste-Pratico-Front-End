@@ -14,27 +14,30 @@ import { environment } from "src/environments/environment"
   providedIn: 'root'
 })
 export class BlogserviceService {
+  url:string = ""
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+    this.url = environment.apiBlog
+  }
 
   getAllPosts():Observable<postModel>{
-    return this.http.get<postModel>(`${environment.apiBlog}/posts`)
+    return this.http.get<postModel>(`${this.url}/posts`)
   }
 
   getCommentsByPostId(idPost:number):Observable<commentsModel>{
-    return this.http.get<commentsModel>(`${environment.apiBlog}/post/${idPost}/comments`)
+    return this.http.get<commentsModel>(`${this.url}/post/${idPost}/comments`)
   }
 
   getPostById(idPost:number):Observable<postModel>{
-    return this.http.get<postModel>(`${environment.apiBlog}/posts/${idPost}`)
+    return this.http.get<postModel>(`${this.url}/posts/${idPost}`)
   }
 
   getAllUsers():Observable<usersModel>{
-    return this.http.get<usersModel>(`${environment.apiBlog}/users`)
+    return this.http.get<usersModel>(`${this.url}/users`)
   }
 
   getUserById(idUser:number):Observable<usersModel>{
-    return this.http.get<usersModel>(`${environment.apiBlog}/users/${idUser}`)
+    return this.http.get<usersModel>(`${this.url}/users/${idUser}`)
   }
 }
 
