@@ -46,13 +46,11 @@ header{
 }
 #menu > ul li:hover{
     background-color: var(--global-color-base-lightBlue);
-    /* color: #fff; */
-    /* filter: invert(), contrast(); */
 }
 #menu > div{
     display: flex;
     justify-content: flex-end;
-    font-size: 20px;
+    font-size: 10px;
     padding: 10px;
 }
 #close_button{
