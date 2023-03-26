@@ -1,0 +1,18 @@
+<header>
+    <h1 routerLink="" id="logo" title="BLOGPOSTS click para voltar a Home">BLOGPOSTS</h1>
+    <img src="assets/images/Users.svg" alt="icon_users" id="img-users" (click)="showMenu()">
+        <div id="menu">
+        <div (click)="closeMenu()">
+            <h1 id="close_button">X</h1>
+        </div>
+        <ul>
+            <li *ngFor="let user of usersModel" [routerLink]="'user/'+user.id">
+                <img src="assets/images/User.svg" alt="img-default" class="img-users">
+                <div>
+                    <h3>{{user.name}}</h3>
+                    <h5>{{user.username}}</h5>
+                </div>  
+            </li>
+        </ul>
+    </div>
+</header>

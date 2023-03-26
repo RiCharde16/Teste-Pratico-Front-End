@@ -1,0 +1,35 @@
+<main class="container" (change)="mudancaSite()">
+    <div class="profile-container">
+        <div class="profile-header container">
+            <div class="profile-img container">
+                <img src="assets/images/User.svg">
+            </div>
+            <h1>{{ userModel?.name }}</h1>
+            <!-- <h1>name</h1> -->
+            <h2>username: {{ userModel?.username}}</h2>
+        </div>
+        <div class="profile-body">
+            <h3>address</h3>
+            <p><span class="contrast">email:</span> {{ userModel?.email }}</p>
+            <div class="container address">
+                <div>
+                    <p><span class="contrast">street:</span> {{ userModel?.address.street }}</p>
+                    <p><span class="contrast">suite:</span> {{ userModel?.address.suite }}</p>
+                </div>
+                <div>
+                    <p><span class="contrast">city:</span> {{ userModel?.address.city }} </p>
+                    <p><span class="contrast">zipcode:</span>{{ userModel?.address.zipcode}}</p>
+                </div>
+            </div>
+            <p><span class="contrast">phone:</span>{{ userModel?.phone }}</p>
+            <p><span class="contrast">website:</span>{{ userModel?.website }}</p>
+            <h3>Geolocation</h3>
+            <p><span class="contrast">latitude:</span>{{ userModel?.address.geo.lat }}</p>
+            <p><span class="contrast">longitude:</span>{{ userModel?.address.geo.lng }}</p>
+            <h3>Company</h3>
+            <p><span class="contrast">name:</span>{{ userModel?.company.name }}</p>
+            <p><span class="contrast">catchPhrase:</span>{{ userModel?.company.catchPhrase }}</p>
+            <p><span class="contrast">bs:</span>{{ userModel?.company.bs }}</p>
+        </div>
+    </div>
+</main>

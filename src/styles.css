@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --global-color-base-darkBlue-700: #00084F;
+    --global-color-base-darkBlue-500: #000E8F;
+    /* --global-color-base-darkBlue-500: #000; */
+    --global-color-base-lightBlue: #C5DCFF;
+}
+body{
+    background-color: var(--global-color-base-lightBlue);
+}

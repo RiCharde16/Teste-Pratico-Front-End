@@ -1,0 +1,34 @@
+<main>
+    <!-- <div class="post-container" (click)="getAllComments(itens.id)" *ngFor="let itens of postsModel; index as i"> -->
+    <div class="post-container" *ngFor="let itens of postsModel; index as i" >
+        <div class="post-main" (click)="clickPostEvent(itens.id)">
+            <div class="post-header">
+                <div class="post-user-img">
+                    <img src="/assets/images/User.svg" alt="default_img">
+                </div>
+                <h3 class="post-title">{{ itens.title }}</h3>
+            </div>
+            <div class="post-body">
+                <p> {{ itens.body }}</p>
+            </div>
+            <div class="post-footer">
+                <div class="send-icon">
+                    <img src="/assets/images/SendIcon.svg" alt="icon-send">
+                </div>
+                <input type="text" class="input-comment">
+            </div>
+        </div>
+        <div class="post-comments"  [id]="i">
+            <div class="comment" *ngFor="let comment of commentsModel[i]" >
+                <div class="user-comment">
+                    <img src="assets/images/User.svg" alt="user-default">
+                </div>
+                <div>
+                    <h4>{{comment.name}}</h4>
+                    <a href="#">{{ comment.email }}</a>
+                    <p>{{ comment.body }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
